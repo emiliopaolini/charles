@@ -79,9 +79,7 @@ void construct_net(){
 int main(){
 
         construct_net();
-
-
-
+        
         int epoch = 1;
         const int n_train_epochs = 10;
         const int n_minibatch = 25;
@@ -167,6 +165,6 @@ int main(){
         // test and show results
         */
         net.test(test_images, test_labels).print_detail(std::cout);
-        net.save("mnist_net_fixed",tiny_dnn::content_type::weights_and_model, tiny_dnn::file_format::binary);
-        net.save("mnist_net_fixed",tiny_dnn::content_type::weights_and_model, tiny_dnn::file_format::json);
+        net.save("mnist_net_fixed_binary",tiny_dnn::content_type::weights_and_model, tiny_dnn::file_format::binary);
+        net.save("mnist_net_fixed_json",tiny_dnn::content_type::weights_and_model, tiny_dnn::file_format::json);
 }

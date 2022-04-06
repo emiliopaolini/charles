@@ -117,9 +117,11 @@ using saturated_elastic_scaled_integer = cnl::scaled_integer<
 
 
 inline float_t operator/( const float_t v1, const float_t v2 ){
+    //return cnl::make_fraction(v1,v2);
     return (float)v1/(float)v2;
-    float_t x = cnl::make_fraction(v1, v2);
-    return x;
+    //float_t x = cnl::quotient(v1,v1);
+    //float_t x = cnl::make_fraction(v1, v2);
+    //return x;
 }
 
 inline float_t operator/=(float_t &v1, const float_t v2 ){
@@ -129,7 +131,7 @@ inline float_t operator/=(float_t &v1, const float_t v2 ){
 
 
 inline float_t operator*( const float_t v1, const float_t v2 ){
-    //return (float)v1/(float)v2;
+    
     return (float)v1*(float)v2;
     auto v1_rep = cnl::to_rep<float_t>{}(v1);
     auto v2_rep = cnl::to_rep<float_t>{}(v2);
