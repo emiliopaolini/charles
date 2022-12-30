@@ -33,4 +33,4 @@ g++ -std=c++20 -pthread -I ../xtl/include -I ../tiny-dnn-orig -I ../boost -I ../
 g++ -std=c++20 -I ../xtl/include -pthread -I ../tiny-dnn -I ../boost -I ../cnl/include -I/usr/include/python2.7  -DWITHOUT_NUMPY -DCNN_USE_FIXED  -finline-functions -O3 mnist_inference.cpp -o mnist_inference.out
 ```
 6) Once run the mnist_inference.out, you will see the accuracy of the architecture and its confusion matrix:
-![accuracy_conf_matrix]([[http://url/to/img.png](https://github.com/emiliopaolini/charles/blob/main/mnist/sample_result.png)]
+<img src="./mnist/sample_result.png"/>
